@@ -1,0 +1,249 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer-content {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.center-container {
+    width: 100%;
+    max-width: 1500px; 
+    padding: 100px 20px;
+    margin: auto;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.avatar-image {
+    width: 100%;
+    /* 让头像图像占满整个容器 */
+    height: auto;
+    /* 自动调整高度，以保持宽高比 */
+}
+
+header.u-header {
+    background-color: #000000;
+    padding: 15px 0;
+    color: #fff;
+}
+
+div.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+
+h1.site-title {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+nav.u-menu {
+    margin-left: 20px;
+}
+
+ul.u-nav {
+    list-style: none;
+    padding: 0;
+}
+
+li.u-nav-item {
+    display: inline;
+    margin-right: 16px;
+    font-family: 'Anek Bangla', sans-serif;
+    font-weight: 1000;
+    padding: 10px 10px;
+}
+
+a.u-text-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 0px;
+}
+
+a.u-text-link2 {
+    color: #478AC9;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 2px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.u-text-link2 {
+    background:
+        linear-gradient(to right,
+            #478AC9,
+            #478AC9),
+        linear-gradient(to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1));
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+a.u-text-link {
+    background:
+        linear-gradient(to right,
+            #478AC9,
+            #478AC9),
+        linear-gradient(to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1));
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+a:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+.big-content {
+    text-align: center;
+    font-size: 96px;
+    padding: 20px 100px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-content-2 {
+    text-align: center;
+    font-size: 96px;
+    padding: 20px 100px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-1 {
+    max-width: 1200px; 
+    width: 100%; 
+    height: 500px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+        -15px -15px 30px rgb(60, 60, 60);
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+    .card-1 {
+        width: 100%;
+        height: auto; 
+    }
+}
+
+.card-1-title {
+    font-size: 48px;
+    padding: auto 20px;
+}
+
+.card-1-description {
+    font-size: 20px;
+    padding-left: 10px 15px;
+    text-align: left;
+}
+
+.small-content {
+    font-size: 24px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+.gradient-text {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgb(247, 125, 125) 0%, rgb(80, 74, 243) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 96px;
+}
+
+/* button */
+button.invite {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
