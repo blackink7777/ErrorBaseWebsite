@@ -1,0 +1,796 @@
+/* Updated Style.css for ErrorCat Discord Bot Webpage with Dark Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    /* Dark background */
+    color: #ffffff;
+    /* Light text */
+}
+
+body,
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 設定背景色和不透明度 */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    /* 在 nav-left 和 nav-right 之間創建空間 */
+    align-items: center;
+    /* 垂直居中對齊 */
+}
+
+.no-transition * {
+    transition: none !important;
+    animation: none !important;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    /* 亮色背景 */
+    color: #000000;
+}
+
+.light-mode .card {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 15px 15px 30px rgb(255, 255, 255),
+        -15px -15px 30px rgb(206, 205, 205);
+}
+
+.light-mode header {
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
+.light-mode body,
+.light-mode section,
+.light-mode header,
+.light-mode footer,
+.light-mode a,
+.light-mode p,
+.light-mode h1,
+.light-mode h2,
+.light-mode span,
+.light-mode footer {
+    color: black !important;
+    /* Ensures this rule has higher specificity */
+}
+
+.light-mode .discord-gradient {
+    background: linear-gradient(90deg, rgba(114, 137, 218, 1) 0%, rgba(177, 86, 217, 1) 100%) !important;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Hide the text color so the gradient shows through */
+    display: inline;
+    /* Keep the span inline with the surrounding text */
+}
+
+.light-mode footer {
+    background-color: #fff;
+}
+
+.light-mode button.learn-more {
+    color: black !important;
+}
+
+.light-mode .Btn {
+    background-color: rgb(0, 0, 0);
+}
+
+.light-mode .Btn:hover .text,
+.light-mode .Page-1 .light-mode .Page-2 {
+    color: #fff !important;
+}
+
+.light-mode .svgIcon path {
+    fill: rgb(255, 255, 255);
+}
+
+.light-mode .learn-more .circle {
+    background-color: rgb(182, 182, 190);
+}
+
+.light-mode .burger span {
+    background: black;
+}
+
+.light-mode .Infopage {
+    background-color: #aaa;
+}
+
+.next-section {
+    margin-top: 100vh;
+    /* Adjust based on the height of your intro section */
+    opacity: 0;
+}
+
+.Infopage {
+    background-color: #1a1c24;
+    /* Set a specific height */
+    min-height: 500px;
+    z-index: 2;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Page-1 {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 80%;
+    /* 或者根据设计需要的宽度 */
+    max-width: 1200px;
+    /* 适当设置最大宽度，以保持布局整洁 */
+    margin: auto;
+    /* 为了在页面上下也居中 */
+    padding: 20px;
+    gap: 20px;
+    /* 图片和文本之间的间距 */
+    color: #fff;
+}
+
+.Page-2 {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 100%;
+    /* 或者根据设计需要的宽度 */
+    max-width: 1200px;
+    /* 适当设置最大宽度，以保持布局整洁 */
+    margin: auto;
+    /* 为了在页面上下也居中 */
+    padding: 50px;
+    gap: 80px;
+    /* 图片和文本之间的间距 */
+    color: #fff;
+}
+
+.image-section {
+    flex: 1;
+    /* 灵活分配空间 */
+}
+
+.partners-section {
+    text-align: center;
+}
+
+.partners-title {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #ffffffa8;
+    font-size: 30px;
+    /* Adjust this value to increase or decrease the space between the title and the logos */
+}
+
+a,
+button {
+    text-decoration: none;
+    /* 移除超連結底線 */
+    border: none;
+    /* 移除按鈕邊框 */
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    /* Center logos in the container */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allows for wrapping if there is not enough horizontal space */
+    gap: 40px;
+    /* Adjust the gap between logos */
+}
+
+.partner-logo {
+    /* Flex properties removed since we're only displaying the image */
+    height: auto;
+    /* Allows the height to adjust to the width while maintaining aspect ratio */
+}
+
+.partner-logo img {
+    width: auto;
+    /* Adjusts to the actual image width */
+    height: 80px;
+    /* Set a minimum height for all logos; adjust as needed */
+    /* Remove max-width and max-height if they are constraining the image size */
+}
+
+.image-section img {
+    width: 450px;
+    /* 图片宽度自适应容器 */
+    max-width: 600px;
+    /* 最大宽度，可根据需要调整 */
+    height: auto;
+    /* 高度自适应以保持图像比例 */
+    object-fit: cover;
+    /* 如果需要填满容器并且裁剪图片来保持比例 */
+}
+
+.text-section {
+    flex: 2;
+    /* 分配比图片更多的空间 */
+    max-width: 600px;
+    /* 最大宽度，可根据需要调整 */
+}
+
+.text-section h1 {
+    margin: 0 0 20px;
+    /* 标题的外边距 */
+    font-size: 2em;
+    /* 标题的字体大小 */
+    color: #fff;
+}
+
+.text-section p {
+    font-size: 1.05em;
+    /* 段落的字体大小 */
+    color: #ffffff;
+    /* 文字颜色 */
+    line-height: 2em
+}
+
+.button-link>button {
+    background-color: #7289da;
+    /* 按鈕的背景色 */
+    color: white;
+    /* 文字顏色 */
+    border: none;
+    /* 無邊框 */
+    padding: 10px 20px;
+    /* 內邊距 */
+    border-radius: 20px;
+    /* 圓角邊框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 盒子陰影 */
+    font-size: 16px;
+    /* 字體大小 */
+    display: inline-block;
+    cursor: pointer;
+    /* 鼠標懸停時顯示指針 */
+    transition: background-color 0.2s;
+    /* 背景色變化的過渡效果 */
+    cursor: pointer;
+    /* 確保顯示手指光標 */
+
+}
+
+.button-link>button:hover {
+    background-color: #5a6268;
+    /* 鼠標懸停時的背景色 */
+}
+
+.dark-button>button {
+    background-color: #23272a;
+    /* 按鈕的背景色 */
+    color: white;
+    /* 文字顏色 */
+    border: none;
+    /* 無邊框 */
+    padding: 10px 20px;
+    /* 內邊距 */
+    border-radius: 20px;
+    /* 圓角邊框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 盒子陰影 */
+    font-size: 16px;
+    /* 字體大小 */
+    text-decoration: none;
+    /* 移除文字下劃線 */
+    display: inline-block;
+    /* 使元素表現為行內塊級元素 */
+    /* 鼠標懸停時顯示指針 */
+    transition: background-color 0.2s;
+    /* 背景色變化的過渡效果 */
+    margin: 10px;
+}
+
+.dark-button>button:hover {
+    background-color: #1b1e23;
+    /* 鼠標懸停時的背景色 */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    /* 鼠標懸停時的陰影效果 */
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-top: 10vh;
+    /* Adjust this to move content down from the top */
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.intro-section h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    /* Space between the h1 and p elements */
+}
+
+.intro-section p {
+    font-size: 1.6rem;
+    /* Adjust based on your preference */
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: rgb(176, 175, 175);
+    /* Space between the p and button */
+}
+
+/* Button Styles */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
+.discord-gradient {
+    background: linear-gradient(90deg, rgba(114, 137, 218, 1) 0%, rgba(177, 86, 217, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Hide the text color so the gradient shows through */
+    display: inline;
+    /* Keep the span inline with the surrounding text */
+}
+
+.errorcat-link {
+    color: #fff;
+    /* or any other color you prefer */
+    text-decoration: none;
+    /* Ensures no underline */
+    font-size: 20px;
+}
+
+header .logo img {
+    border-radius: 50%;
+    /* Makes the image circular */
+    width: 38px;
+    /* Adjust the width as needed */
+    height: 38px;
+    /* Adjust the height as needed */
+    object-fit: cover;
+    /* Ensures the image covers the area without losing its aspect ratio */
+    padding: 0px;
+    /* Adds space around the logo */
+    display: inline-block;
+    align-items: center;
+    /* Ensures the logo respects padding */
+}
+
+/* Assuming "使用教學" has an ID of #tutorial and "操作面板" has an ID of #dashboard */
+#tutorial {
+    margin-right: 15px;
+    /* Increase the right margin to create more space */
+}
+
+/* Or, if using classes */
+.tutorial-link {
+    margin-right: 10px;
+    /* Adjust as needed */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* Adjust the gap between logo and text */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* Adjust the gap between logo and text */
+    font-size: 10px;
+    font-weight: 550;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    padding: 0.5%;
+}
+
+.nav-left {
+    margin-left: 10%;
+    /* 根據您的需求調整 */
+}
+
+.nav-right {
+    margin-right: 10%;
+}
+
+.nav-divider {
+    height: 20px;
+    width: 2px;
+    background-color: #aaa;
+    /* Light grey for the divider */
+    margin: 0 15px;
+}
+
+.nav-left>*,
+.nav-right>* {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Ensure proper alignment */
+    font-weight: 550;
+}
+
+/* Add vertical divider */
+.vertical {
+    height: 20px;
+    width: 2px;
+    background-color: #aaa;
+    margin: 0 20px;
+    /* Adjust spacing around the divider */
+}
+
+.text {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.hover-3 {
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hover-3::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.hover-3:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+section {
+    margin: 20px auto;
+    max-width: 960px;
+    /* Center content */
+    background-color: #1e1e1e;
+    /* Darker card background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+@keyframes loading-wave-animation {
+
+    0%,
+    100% {
+        height: 10px;
+    }
+
+    50% {
+        height: 50px;
+    }
+}
+
+.card {
+    width: 90%;
+    max-width: 80%;
+    height: auto;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+        -15px -15px 30px rgb(60, 60, 60);
+
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    /* Ensures footer is full width of the viewport */
+    box-sizing: border-box;
+    /* Includes padding in the element's total width */
+    margin: 0 auto;
+    /* Centers the footer */
+}
+
+.intro-section {
+    text-align: center;
+}
+
+.intro-part {
+    display: inline;
+    /* 讓每個部分單獨顯示一行 */
+}
+
+
+@media (max-width: 1490px) {
+    .nav-left {
+        margin-left: 2%;
+    }
+
+    .nav-right {
+        margin-right: 2%;
+    }
+
+    .intro-part {
+        display: block;
+        /* 默認為連續顯示 */
+    }
+
+    .partners-container,
+    .introduction-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .Page-1 {
+        padding: auto;
+        padding-top: 50px;
+    }
+
+    .Page-2 {
+        padding: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0px;
+        gap: 20px;
+        color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 0.5%;
+    }
+    .intro-part {
+        font-size: 74px;
+    }
+
+    .nav-left {
+        margin-right: 0px;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .Page-1 {
+        padding: auto;
+        padding-top: 50px;
+    }
+
+    .Page-2 {
+        padding: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0px;
+        gap: 20px;
+        color: #fff;
+    }
+
+    .partners-section {
+        display: none;
+    }
+
+    .nav-right {
+        display: flex;
+        justify-content: flex-end;
+        /* Aligns content to the right */
+        width: 100%;
+        /* Ensures the container takes full width */
+        margin-right: 5%;
+    }
+
+    .burger {
+        display: flex;
+        position: relative;
+
+    }
+
+    .logo,
+    .burger {
+        margin-right: auto;
+        /* Ensures they stick to the left */
+    }
+
+    .nav-divider,
+    .container,
+    .Btn {
+        display: none !important;
+    }
+
+    .tutorial-link,
+    .dashboard-link {
+        display: none;
+    }
+
+    .nav-left>*,
+    .nav-right>* {
+        margin: 5px 10px;
+        /* Adjust for smaller screens */
+    }
+
+    .card {
+        width: 70vw;
+        /* 在小屏幕上使卡片寬度滿屏顯示 */
+    }
+
+}
+
+@media (max-width: 599px) {
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+        /* Adjust height to maintain aspect ratio */
+        object-fit: contain;
+        /* Ensure the image is fully visible */
+    }
+
+    .text-section {
+        flex: none;
+        width: auto;
+        max-width: 100%;
+        padding: 0 10px;
+        /* Add padding to prevent text touching the edges */
+        box-sizing: border-box;
+        /* To include padding in the element's total width */
+    }
+}
